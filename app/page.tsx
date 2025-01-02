@@ -6,7 +6,7 @@ import { Center, OrbitControls, Text3D } from "@react-three/drei";
 function Experience() {
   return (
     <Center>
-      <Text3D font="/fonts/gentilis_bold.typeface.json" size={0.7}>
+      <Text3D font="fonts/gentilis_bold.typeface.json" size={0.7}>
         Result-oriented
         <meshNormalMaterial />
       </Text3D>

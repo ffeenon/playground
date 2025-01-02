@@ -22,8 +22,8 @@ function Experience() {
   });
 
   const [perlinTexture, treeRootTexture] = useTexture([
-    "/texture/perlin.jpg",
-    "/texture/tree_root.png",
+    "texture/perlin.jpg",
+    "texture/tree_root.png",
   ]);
 
   return (

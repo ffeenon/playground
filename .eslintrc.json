@@ -12,6 +12,7 @@
         "args": "after-used",
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "react/display-name": "off"
   }
 }

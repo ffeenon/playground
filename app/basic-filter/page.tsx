@@ -1,8 +1,8 @@
-'use client'
+"use client";
 
-import {Canvas} from "@react-three/fiber";
-import {OrbitControls, useTexture} from "@react-three/drei";
-import {useControls} from "leva";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, useTexture } from "@react-three/drei";
+import { useControls } from "leva";
 import FilterMaterial from "@/component/r3f/FilterMaterial";
 
 function Experience() {
@@ -29,12 +29,16 @@ function Experience() {
   return (
     <mesh>
       <planeGeometry args={[size, size]} />
-      <FilterMaterial filter={filter} baseTexture={treeRootTexture} filterTexture={perlinTexture} />
+      <FilterMaterial
+        filter={filter}
+        baseTexture={treeRootTexture}
+        filterTexture={perlinTexture}
+      />
     </mesh>
   );
 }
 
-export default function Home() {
+export default () => {
   return (
     <Canvas>
       <OrbitControls />
@@ -42,4 +46,4 @@ export default function Home() {
       <Experience />
     </Canvas>
   );
-}
+};

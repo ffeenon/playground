@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production';
+const basePath = process.env.BASE_PATH || ''; // 环境变量，如果没有则为空
 
 const nextConfig = {
   webpack(config) {
@@ -14,8 +14,8 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: isProd ? '/playground/' : '',
-  basePath: isProd ? '/playground' : '',
+  assetPrefix: basePath ? `/${basePath}/` : '',
+  basePath: basePath ? `/${basePath}` : '',
   output: 'export'
 };
 

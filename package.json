@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cross-env BASE_PATH= next build",
     "start": "next start",
     "lint": "next lint",
-    "deploygp": "npm run build && touch ./out/.nojekyll && gh-pages -d out -t true"
+    "deploygp": "cross-env BASE_PATH=playground next build && touch ./out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
     "@react-three/drei": "^9.120.5",
@@ -25,6 +25,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "13.5.8",
     "eslint-plugin-unused-imports": "^2.0.0",

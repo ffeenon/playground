@@ -3,8 +3,9 @@
 import { NodeApi, Tree } from "react-arborist";
 import useResizeObserver from "use-resize-observer";
 import { PiHamburger } from "react-icons/pi";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const linksTree = [
   { id: "/", name: "Home" },
@@ -37,12 +38,18 @@ function getPath(node: NodeApi<any>): string {
 
 // @ts-ignore
 function Node({ node, style, dragHandle }) {
-  /* This node instance can do many things. See the API reference. */
+  const path = useMemo(() => getPath(node), []);
+  const currentPath = usePathname();
   return (
     <div style={style} ref={dragHandle}>
       {node.isLeaf ? "🍁" : "🗀"}
       {node.isLeaf ? (
-        <Link href={getPath(node)}>{node.data.name}</Link>
+        <Link
+          className={`${currentPath === path ? "bg-gray-500 text-white" : ""}`}
+          href={path}
+        >
+          {node.data.name}
+        </Link>
       ) : (
         node.data.name
       )}
@@ -56,13 +63,15 @@ export default () => {
 
   return (
     <>
-      <div className={`absolute w-full h-full flex left-0 top-0 ${isFolded ? '-z-10' : 'z-0'}`}>
+      <div
+        className={`absolute w-full h-full flex left-0 top-0 ${isFolded ? "-z-10" : "z-0"}`}
+      >
         <div
           ref={ref}
-          className={`w-1/4 h-full transition-all duration-300 ease-in-out ${isFolded ? "-translate-x-full" : "-translate-x-0"}`}
+          className={`w-1/4 h-full bg-white border-r-2 border-r-fuchsia-300 transition-all duration-300 ease-in-out ${isFolded ? "-translate-x-full" : "-translate-x-0"}`}
         >
           <Tree
-            className="bg-amber-400"
+            // className="bg-amber-400"
             width={width}
             height={height}
             initialData={linksTree}

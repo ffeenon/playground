@@ -3,13 +3,13 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import { useControls } from "leva";
-import AmbientLightDebugger from "@/component/r3f/AmbientLightDebugger";
-import HemisphereLightDebugger from "@/component/r3f/HemisphereLightDebugger";
-import DirectionalLightDebugger from "@/component/r3f/DirectionalLightDebugger";
-import PointLightDebugger from "@/component/r3f/PointLightDebugger";
-import RectAreaLightDebugger from "@/component/r3f/RectAreaLightDebugger";
-import SpotLightDebugger from "@/component/r3f/SpotLightDebugger";
-import LightProbeDebugger from "@/component/r3f/LightProbeDebugger";
+import AmbientLightDebugger from "@/components/r3f/AmbientLightDebugger";
+import HemisphereLightDebugger from "@/components/r3f/HemisphereLightDebugger";
+import DirectionalLightDebugger from "@/components/r3f/DirectionalLightDebugger";
+import PointLightDebugger from "@/components/r3f/PointLightDebugger";
+import RectAreaLightDebugger from "@/components/r3f/RectAreaLightDebugger";
+import SpotLightDebugger from "@/components/r3f/SpotLightDebugger";
+import LightProbeDebugger from "@/components/r3f/LightProbeDebugger";
 
 function Experience() {
   /**

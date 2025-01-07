@@ -2,7 +2,6 @@
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useControls } from "leva";
 import AmbientLightDebugger from "@/components/r3f/AmbientLightDebugger";
 import HemisphereLightDebugger from "@/components/r3f/HemisphereLightDebugger";
 import DirectionalLightDebugger from "@/components/r3f/DirectionalLightDebugger";

@@ -14,7 +14,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // Disable default image optimization
   },
-  assetPrefix: basePath ? `/${basePath}/` : '',
+  assetPrefix: basePath ? `/${basePath}` : '',
   basePath: basePath ? `/${basePath}` : '',
   output: 'export'
 };

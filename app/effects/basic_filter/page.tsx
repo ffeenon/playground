@@ -4,6 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
 import { useControls } from "leva";
 import FilterMaterial from "@/components/r3f/FilterMaterial";
+import perlinImg from "@/assets/texture/perlin.jpg";
+import treeRootImg from "@/assets/texture/tree_root.png";
+
 
 function Experience() {
   const { size, filter } = useControls({
@@ -20,10 +23,9 @@ function Experience() {
       max: 1.0,
     },
   });
-
   const [perlinTexture, treeRootTexture] = useTexture([
-    "/texture/perlin.jpg",
-    "/texture/tree_root.png",
+    perlinImg.src,
+    treeRootImg.src,
   ]);
 
   return (

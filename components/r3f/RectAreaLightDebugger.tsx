@@ -3,7 +3,7 @@ import { useControls } from "leva";
 export default () => {
   const { enabled, ...props } = useControls("rect area light", {
     enabled: {
-      value: true,
+      value: false,
     },
     color: "#ffffff",
     intensity: 1,

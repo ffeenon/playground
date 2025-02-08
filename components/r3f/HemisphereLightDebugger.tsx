@@ -3,7 +3,7 @@ import { useControls } from "leva";
 export default () => {
   const { enabled, ...props } = useControls("hemisphere light", {
     enabled: {
-      value: true,
+      value: false,
     },
     color: "#ffffff",
     groundColor: "#ffffff",

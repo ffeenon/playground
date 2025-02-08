@@ -3,7 +3,7 @@ import { useControls } from "leva";
 export default () => {
   const { enabled, ...props } = useControls("light probe", {
     enabled: {
-      value: true,
+      value: false,
     },
     intensity: {
       value: 1,

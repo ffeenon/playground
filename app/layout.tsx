@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import FoldableLinks from "@/components/FoldableLinks";
+import CoreConcept from "@/components/CoreConcept";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-      <FoldableLinks/>
+      <body className={`${inter.className} flex flex-col`}>
+        <div className="flex-1">{children}</div>
+        <div>
+          <CoreConcept />
+        </div>
+        <FoldableLinks />
       </body>
     </html>
   );
